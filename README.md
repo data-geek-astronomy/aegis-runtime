@@ -26,7 +26,7 @@ This is intentionally more than a chatbot. The runtime separates intent planning
 - Privacy audit log for every tool call
 - Latency profiling for planning, tool execution, and response composition
 - Testable runtime contracts
-- Hugging Face Spaces-ready Gradio UI
+- Hugging Face Spaces-ready web UI
 
 ## Run locally
 
@@ -74,11 +74,11 @@ flowchart LR
 
 This folder is already structured like a Gradio Space. Create a Hugging Face Space with:
 
-- SDK: Gradio
+- SDK: Gradio-compatible Python app
 - App file: `app.py`
 - Python requirements: `requirements.txt`
 
-Then push the contents of this directory to the Space repository.
+Then push the contents of this directory to the Space repository. The app serves a FastAPI UI on port `7860`, which keeps the deployment path small and reliable.
 
 ## Roadmap
 
